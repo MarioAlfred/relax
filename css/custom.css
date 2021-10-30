@@ -1,0 +1,462 @@
+/* ---- reset ---- */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Balsamiq Sans', cursive;
+    font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#title_relax {
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  right: 20%;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Balsamiq Sans', cursive;
+    font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#title_relax span {
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/*HOME BTN*/
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+/*Taking a breath*/
+.watch-face {
+  height: 125px;
+  width: 125px;
+}
+
+.circle {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: screen;
+  transform: translate(0, 0);
+}
+
+.circle:nth-child(odd) {
+  background: #61bea2;
+}
+
+.circle:nth-child(even) {
+  background: #529ca0;
+}
+
+.circle:nth-child(1) {
+  animation: circle-1 4s ease alternate infinite;
+}
+
+.circle:nth-child(2) {
+  animation: circle-2 4s ease alternate infinite;
+}
+
+.circle:nth-child(3) {
+  animation: circle-3 4s ease alternate infinite;
+}
+
+.circle:nth-child(4) {
+  animation: circle-4 4s ease alternate infinite;
+}
+
+.circle:nth-child(5) {
+  animation: circle-5 4s ease alternate infinite;
+}
+
+.circle:nth-child(6) {
+  animation: circle-6 4s ease alternate infinite;
+}
+
+@keyframes circle-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-35px, -50px);
+  }
+}
+
+@keyframes circle-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(35px, 50px);
+  }
+}
+
+@keyframes circle-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-60px, 0);
+  }
+}
+
+@keyframes circle-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 0);
+  }
+}
+
+@keyframes circle-5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-35px, 50px);
+  }
+}
+
+@keyframes circle-6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(35px, -50px);
+  }
+}
+
+
+/*Typed js*/
+
+.center {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-family: 'Balsamiq Sans', cursive;
+    font-size: 25px;
+}
+span.type {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 100px;
+}
+span.type::after {
+  content: "|";
+  display: inline;
+  animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor {
+  opacity: 0;
+  display: none;
+}
+
+/*Custom cursor animation*/
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/*Glowing circle css*/
+
+@-webkit-keyframes pulse {
+  0% { box-shadow:0 0 16px #ffffff, inset 0 0 16px #ffffff; }
+  50% { box-shadow:0 0 32px #ffffff, inset 0 0 32px #ffffff; }
+  100% { box-shadow:0 0 64px #ffffff, inset 0 0 64px #ffffff; }
+}
+
+
+
+.inner {
+  background-color:#fff;
+  width:300px;
+  height:300px;
+  border-radius:10em;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+
+  /* -webkit-animation: pulse 3s linear 3s infinite; */
+}
+.inner textarea {
+  display: block;
+  text-align: center;
+  line-height: 41px;
+  font-family: 'Balsamiq Sans', cursive;
+    font-weight: 500;
+  font-size: 21px;
+  color: #000000;
+  text-shadow: 0 0 4px #fff;
+  background-color: transparent;
+  border: none;
+  padding-right: 20px;
+padding-left: 20px;
+
+  padding-top: 100px;
+
+}
+
+
+
+/*DISAPPEARING*/
+
+@keyframes myAnimation{
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1.0);
+}
+10% {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+}
+20% {
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+}
+30% {
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+}
+40% {
+  transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+}
+50% {
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+60% {
+  transform: scale(0.4);
+  -webkit-transform: scale(0.4);
+}
+70% {
+  transform: scale(0.3);
+  -webkit-transform: scale(0.3);
+}
+80% {
+  transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+}
+90% {
+  transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+}
+100% {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+
+}
+}
+
+.star-container-animation{
+    animation-name: myAnimation;
+    animation-duration: 30000ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+
+}
+
+#all_txt {
+  display: none;
+}
+
+#try-again {
+  display: none;
+}
+
+#thoughts {
+  padding-left: 30px;
+}
