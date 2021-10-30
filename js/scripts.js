@@ -151,17 +151,23 @@ function wait(ms) {
 
 //typed js
 function addText() {
-    document.getElementById('thoughts').innerHTML = document.getElementById('thoughts_input').value;
-    startAnimation();
 
-    var audio = new Audio('assets/Audio/background.mp3');
-    audio.play();
-
-    hideTextInput();
-
-
-
-    showTxtOnClickStart();
+    if(document.getElementById('thoughts_input').value.length == 0){
+        alert("Please enter your feelings and press Let's start , You are doing great");
+    } else {
+        document.getElementById('thoughts').innerHTML = document.getElementById('thoughts_input').value;
+        startAnimation();
+    
+        var audio = new Audio('assets/Audio/background.mp3');
+        audio.play();
+    
+        hideTextInput();
+    
+    
+    
+        showTxtOnClickStart();
+    }
+   
 
 
 }
@@ -185,3 +191,14 @@ function showTxtOnClickStart() {
     document.getElementById('all_txt').style.display = 'block';
 
 }
+
+
+$('#thoughts_input').on('keypress keyup keydown', function () { 
+    if ($('#thoughts_input').val() == "" ) { 
+      $('#start_btn').prop('disabled', true); 
+    } 
+    else {   
+      $('#start_btn').prop('disabled', false); 
+    } 
+  });
+  

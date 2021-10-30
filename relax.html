@@ -46,8 +46,7 @@
 
         <div class="star-container d-flex justify-content-center mt-2" id="star">
             <div class="inner">
-                <textarea id="thoughts" name="w3review" rows="3" cols="22">
-Write your feelings in the star
+                <textarea id="thoughts" name="w3review" rows="3" cols="22"  placeholder="">
             </textarea>
 
             </div>
@@ -57,7 +56,7 @@ Write your feelings in the star
         <form class="  justify-content-center mt-5 ">
             <label class="sr-only" for="inlineFormInputName2">Name</label>
             <input type="text" class="form-control mb-2 mr-sm-2" id="thoughts_input"
-                placeholder="Put your feelings in a star">
+                placeholder="your feelings" onkeyup="success()">
 
             <button id="start_btn" class="glow-on-hover " type="button" onclick="addText()">LET'S START</button>
             <button id="try-again" class="glow-on-hover " type="button" onclick="window.location.reload();">Write more ? </button>
