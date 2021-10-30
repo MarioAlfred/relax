@@ -13,91 +13,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/custom.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+
 
 </head>
 
 <body>
-    <!-- Responsive navbar-->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">throwittothesea</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+    <!-- particles.js container -->
+    <div id="particles-js"></div> 
+    <div id="title">
+  
+      
+        <span>
+          60 SECONDS FOR RELAXATION
 
-    <!-- Page content-->
-    <div class="container">
-        <video autoplay muted loop id="seaVideo">
-            <source src="./assets/videos/sea_ambience.mp4" type="video/mp4">
-        </video>
+        </span>
+        <br>
+        <button class="glow-on-hover mt-5" type="button" onclick="location.href='relax.html';" >LET'S START</button>
 
-    </div>
-    <!--overlay content-->
-    <!-- Optional: some overlay text to describe the video -->
-    <div class="content">
-        <div class="text-container">
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="أكتب هنا كل اللي مضايقك و ارميه البحر "></textarea>
-            </div>
-        </div>
 
-        <!-- Use a button to pause/play the video with JavaScript -->
-        <button id="myBtn" onclick="myFunction()">انسي و ارمي جوا البحر</button>
-    </div>
-      
-    <!-- Audio -->
-    <!--        <audio  class="" id="audioSea" src="./assets/Audio/sea_ambience.mp3"></audio> -->
-          
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        onclick="playAudio()">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+
 
     <!-- Bootstrap core JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -109,35 +65,9 @@
 
 
 
-    <!--MODAL-->
-
-    <script>
-        $('#myModal').modal('show');
 
 
 
-
-        $('#myModal').modal({
-            backdrop: 'static',
-            keyboard: false
-        });
-
-        function playAudio() {
-            var myAudio = new Audio('./assets/Audio/sea_ambience.mp3');
-            myAudio.addEventListener('ended', function () {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-            myAudio.play();
-        }
-
-
-
-        $("#myBtn").click(function () {
-            $("#exampleFormControlTextarea1").fadeOut().fadeIn(2000);
-            alert("ok");
-        });
-    </script>
 </body>
 
 </html>
