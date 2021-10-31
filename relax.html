@@ -15,16 +15,13 @@
     <link href="css/custom.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
-
     <audio controls loop class="d-none">
         <source src="./assets/Audio/background.mp3" type="audio/ogg">
 
@@ -33,59 +30,28 @@
     <!-- particles.js container -->
     <div id="particles-js"></div>
     <div id="title_relax">
-
-
         <span class="center">
             <div class="text" id="all_txt">
                 <span class="type"></span>
             </div>
-
-
         </span>
-
-
         <div class="star-container d-flex justify-content-center mt-2" id="star">
             <div class="inner">
-                <textarea readonly id="thoughts" name="w3review" rows="5" cols="24"  placeholder="">
+                <textarea readonly id="thoughts" name="w3review" rows="5" cols="24" placeholder="">
             </textarea>
 
             </div>
         </div>
-
-
         <form class="  justify-content-center mt-5 ">
             <label class="sr-only" for="inlineFormInputName2">Name</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="thoughts_input"
-                placeholder="your feelings" onkeyup="success()">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="thoughts_input" placeholder="your feelings"
+                onkeyup="success()">
 
             <button id="start_btn" class="glow-on-hover " type="button" onclick="addText()">LET'S START</button>
-            <button id="try-again" class="glow-on-hover " type="button" onclick="window.location.reload();">Write more ? </button>
-
-
-
-
-
+            <button id="try-again" class="glow-on-hover " type="button" onclick="window.location.reload();">Write more ?
+            </button>
         </form>
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
 
 
@@ -105,6 +71,8 @@
     <script src="js/scripts.js"></script>
 
 
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             Typed.new('.type', {
@@ -119,7 +87,7 @@
                 // time before typing starts
                 startDelay: 5500,
                 // backspacing speed
-                backSpeed: 50,
+                backSpeed: 0,
                 // time before backspacing
                 backDelay: 500,
                 // loop
@@ -134,6 +102,11 @@
                 attr: null,
                 // either html or text
                 contentType: 'html',
+                //shuffle
+                shuffle: true
+
+
+
             });
         });
     </script>
@@ -145,6 +118,8 @@
 
         });
     </script>
+
+
 
 
 
