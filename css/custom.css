@@ -381,8 +381,8 @@ span.type::after {
   text-shadow: 0 0 4px #fff;
   background-color: transparent;
   border: none;
-  padding-right: 20px;
-padding-left: 20px;
+  /* padding-right: 20px;
+padding-left: 20px; */
 
   padding-top: 100px;
 
@@ -458,13 +458,14 @@ padding-left: 20px;
 }
 
 #thoughts {
-  padding-left: 30px;
+  /* padding-left: 30px; */
+  width: inherit;
 }
 
 
 @media only screen and (max-width: 600px) {
   #thoughts {
-    padding-left: 19px;
+    /* padding-left: 19px; */
   }
   
 }
