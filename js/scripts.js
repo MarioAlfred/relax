@@ -206,3 +206,5 @@ $('#thoughts_input').on('keypress keyup keydown', function () {
 
 
 
+//Typed
+
